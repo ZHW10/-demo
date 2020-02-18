@@ -1,16 +1,24 @@
 <template>
-<div>
+<div id="app">
+  <HeaderApp/>
+  <router-view></router-view>
+  <FooterNav/>
 </div>
 </template>
 
 <script>
+import FooterNav from './commponts/FooterNav/FooterNav.vue'
+import HeaderApp from './commponts/HeaderApp/HeaderApp'
 export default {
-  mounted(){
-    console.log(this)
-  }
+  components:{
+    FooterNav,
+    HeaderApp
+    }
 }
 </script>
 
-<style>
-
+<style lang="stylus">
+#app
+  width 100%
+  height 100%
 </style>
