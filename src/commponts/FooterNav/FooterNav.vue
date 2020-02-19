@@ -1,6 +1,6 @@
 <template>
   <div id="FooterNav">
-    <div @click="goPath('/profile')" :class="{active:$route.path==='/profile'}" class="item">
+    <div @click="goPath('/Profile')" :class="{active:$route.path==='/profile'}" class="item">
       <i class="icon-shouye iconfont"></i>
       <span>首页</span>
     </div>

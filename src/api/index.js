@@ -1,5 +1,9 @@
-import axios from 'axios'
-export const indexNav=()=>axios({
+import ajax from './ajax'
+export const indexNav=()=>ajax({
     method:'get',
     url:'/indexCateModule'
+})
+export const indexContain=()=>ajax({
+    method:'get',
+    url:'/index'
 })
