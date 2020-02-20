@@ -36,6 +36,7 @@ export default {
 <style lang="stylus">
 @import "../../common/stylus/mixins.styl";
 #FooterNav
+  background white
   top-border-1px($fff)
   position fixed
   bottom 0

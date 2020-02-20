@@ -16,7 +16,9 @@ instance.interceptors.response.use(
   error => {
   }
 )
-
+const instance1 = axios.create({
+  baseURL: '/163'
+})
 
 
 export default instance

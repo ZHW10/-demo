@@ -10,7 +10,22 @@ let index=require('./datas/index.json');
 let cateNavDatas=require('./datas/cateNavDatas.json');
 let indexCacateListsteModule=require('./datas/cateLists.json');
 router.get('/indexCateModule', (ctx, next) => {
+  console.log('fdsafdas')
   ctx.body = indexCateModule
+});
+router.get('/indexOthers', (ctx, next) => {
+  let indexNavs=[...JSON.parse(indexCateModule)]
+  console.log(indexNavs)
+  let param1=ctx.query
+  console.log(param1)
+  let result
+  for(let a=0;a<indexNavs.length;a++){
+    if(param1==indexNavs[a].id){
+      result=indexNavs[a]
+    }
+  }
+
+  ctx.body = JSON.stringify(result) 
 });
 router.get('/index', (ctx, next) => {
   ctx.body = index

@@ -35,6 +35,14 @@ module.exports = {
         pathRewrite: {
           '^/api': ''
         }
+      },
+      '/163': {
+        target: 'https://m.you.163.com',
+        ws: true,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/163': ''
+        }
       }
     }
   }

@@ -14,9 +14,10 @@
 <style lang="stylus">
 @import "../../common/stylus/mixins.styl";
 #HeaderApp
-    // position fixed
-    // left 0
-    // top 0
+    position fixed
+    left 0
+    top 0
+    z-index 1
     width 100%
     height 104px
     img

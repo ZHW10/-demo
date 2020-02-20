@@ -1,6 +1,6 @@
 <template>
-  <div>
-person
+  <div id="hotShoping">
+    hotShoping
   </div>
 </template>
 
@@ -9,7 +9,8 @@ person
   }
 </script>
 
-<style scoped>
-
+<style lang="stylus" scoped>
+#hotShoping
+  width 100%
  
 </style>

@@ -3,7 +3,7 @@
     <div class="header">
       <div class="headerTop">
         <a class="logo" href="/"></a>
-        <div class="search">
+        <div @click="search" class="search">
           <i class="icon-suosou iconfont"></i>
           <span class="placeholder">搜索商品, 共20259款好物</span>
         </div>
@@ -50,6 +50,8 @@
         </div>
       </div>
       <advertising/>
+      <newpeople/>
+      <hotShoping/>
     </div> 
     <router-view v-else></router-view>
   </div>
@@ -58,9 +60,13 @@
 <script type="text/ecmascript-6">
 import BScroll from 'better-scroll'
 import advertising from '../commponts/advertising/advertising'
+import newpeople from '../commponts/newpeople/newpeople'
+import hotShoping from '../commponts/hotShoping/hotShoping'
   export default {
     components:{
-      advertising
+      advertising,
+      newpeople,
+      hotShoping
     },
     data(){
       return{
@@ -89,7 +95,9 @@ import advertising from '../commponts/advertising/advertising'
         }else{
           this.$router.push('/Profile')
         }
-        
+      },
+      search(){
+        this.$router.push('/search')
       }
     },
     watch:{
@@ -100,9 +108,11 @@ import advertising from '../commponts/advertising/advertising'
 <style lang="stylus">
 @import "../common/stylus/mixins.styl";
 #profile
-  position relative
   width 100%
   height 100%
+  background #fff
+  padding-top 105px
+  box-sizing border-box
   .header
     width 100%
     height 148px
@@ -112,6 +122,8 @@ import advertising from '../commponts/advertising/advertising'
       display flex
       justify-content center
       align-items center
+      >a
+        margin-right: .26667rem;
       .search
         width 442px
         height 56px
